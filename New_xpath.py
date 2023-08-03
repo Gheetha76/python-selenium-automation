@@ -11,6 +11,8 @@
 # driver = webdriver.Chrome(service=service)
 # driver.maximize_window()
 
+# driver.get('https://www.google.com/')
+
 # driver.find_element(By.ID, 'nav-search-submit-button')
 # driver.find_element(By.ID, 'nav-cart-count')
 #
