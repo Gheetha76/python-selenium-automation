@@ -2,6 +2,10 @@
 Feature:  Check if the cart has the added items
 
 
+
+
+
+
   Scenario:Verify if the added product is in the cart
      Given  Open Amazon page
       When  Input a product
