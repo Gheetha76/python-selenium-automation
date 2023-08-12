@@ -8,8 +8,8 @@ ISSUE_CARD = (By.CSS_SELECTOR,'.issue-card-container')
 UI_ELEMENTS = (By.CSS_SELECTOR,'.issue-card-wrapper')
 SEARCH_HELP_LIBRARY = (By.XPATH,'//h2[text()="Search our help library"]')
 INPUT_FIELD = (By.CSS_SELECTOR,'.a-input-text.a-span12')
-ALL_HELP_TOPICS = (By.CSS_SELECTOR,'.help-topics')
 TOPICS_ALL_HELP = (By.XPATH,'//h2[text()="All help topics"]')
+ALL_HELP_TOPICS = (By.CSS_SELECTOR,'.help-topics')
 
 @when('Click on Amazon Customer Service tab')
 def click_amazon_customer_service(context):
@@ -25,7 +25,7 @@ def check_ui_elements(context):
 def verify_ui_elements(context,num):
     num = int(num)
     num3 = context.driver.find_elements(*UI_ELEMENTS)
-    assert len(num3) == num, f'Error, expected {num} links but got {len(num3)}'
+    assert len(num3) == num, f'Error, expected {num}  but got only {len(num3)}'
 
 @then('Check for search help library')
 def search_help_library(context):
@@ -44,4 +44,4 @@ def check_all_help_topics(context):
 def verify_link(context,h1):
     h1 = int(h1)
     h2 = context.driver.find_elements(*ALL_HELP_TOPICS)
-    assert len(h2) == h1, f'Error, expected {h1} but got only {len(h2)}'
+    assert len(h2) == h1, f'Error, expected {h1} but there is only {len(h2)}'
