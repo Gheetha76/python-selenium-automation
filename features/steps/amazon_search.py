@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 
 @given('Open Amazon page')
-def amazon_1_page(context):
+def open_amazon_page(context):
     context.driver.get('https://www.amazon.com/')
 
 

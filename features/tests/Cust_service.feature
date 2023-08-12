@@ -11,6 +11,7 @@ Feature: To test if Customer Service’s page has UI elements
 #     Then   Verify all 12 UI elements are enabled
      Then   Check for search help library
      Then   Check for input field to search library
+     Then   Check for all help topics
      Then   Verify all 12 links under All help topics
 
 

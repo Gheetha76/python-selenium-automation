@@ -6,33 +6,39 @@ AMAZON_CUSTOMER_SERVICE = (By.CSS_SELECTOR,'a[href="/gp/help/customer/display.ht
 WELCOME_CUSTOMER = (By.CSS_SELECTOR,'h1.fs-heading.bolded')
 ISSUE_CARD = (By.CSS_SELECTOR,'.issue-card-container')
 UI_ELEMENTS = (By.CSS_SELECTOR,'.issue-card-wrapper')
-SEARCH_HELP_SEARCH = (By.CSS_SELECTOR,'h2.fs-heading.bolded')
+SEARCH_HELP_LIBRARY = (By.XPATH,'//h2[text()="Search our help library"]')
 INPUT_FIELD = (By.CSS_SELECTOR,'.a-input-text.a-span12')
 ALL_HELP_TOPICS = (By.CSS_SELECTOR,'.help-topics')
+TOPICS_ALL_HELP = (By.XPATH,'//h2[text()="All help topics"]')
 
 @when('Click on Amazon Customer Service tab')
-def open_amazon_customer_service(context):
+def click_amazon_customer_service(context):
     context.driver.find_element(*AMAZON_CUSTOMER_SERVICE).click()
 
 @when('Check for UI elements are visible')
-def ui_elements(context):
+def check_ui_elements(context):
     context.driver.find_element(*WELCOME_CUSTOMER)
     context.driver.find_element(*ISSUE_CARD)
     # context.driver.find_element(*UI_ELEMENTS)
 
 @then('Verify all {num} UI elements')
-def elements_ui(context,num):
+def verify_ui_elements(context,num):
     num = int(num)
     num3 = context.driver.find_elements(*UI_ELEMENTS)
     assert len(num3) == num, f'Error, expected {num} links but got {len(num3)}'
 
 @then('Check for search help library')
 def search_help_library(context):
-    context.driver.find_element(*SEARCH_HELP_SEARCH)
+    context.driver.find_element(*SEARCH_HELP_LIBRARY)
 
 @then('Check for input field to search library')
-def input_field(context):
+def check_input_field(context):
     context.driver.find_element(*INPUT_FIELD)
+
+
+@then('Check for all help topics')
+def check_all_help_topics(context):
+    context.driver.find_element(*TOPICS_ALL_HELP)
 
 @then('Verify all {h1} links under all help topics')
 def verify_link(context,h1):

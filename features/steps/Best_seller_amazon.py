@@ -10,7 +10,7 @@ def open_best_seller_page(context):
 
 
 @then('verify if there are {n1} links')
-def number_link(context,n1):
+def Verify_number_link(context,n1):
     n1 = int(n1)
     link_number = context.driver.find_elements(*NUMBER_OF_LINKS)
     assert len(link_number) == n1 , f'Error, expected {n1} but got only {len(link_number)}'
