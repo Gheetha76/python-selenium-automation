@@ -2,7 +2,7 @@ from behave import given, when, then
 from selenium.webdriver.common.by import By
 
 SELLER_BEST_PAGE =(By.CSS_SELECTOR,'a[href="/gp/bestsellers/?ref_=nav_cs_bestsellers"]')
-NUMBER_OF_LINKS =(By.CSS_SELECTOR,'._p13n-zg-nav-tab-all_style_zg-tabs-li-div__1YdPR')
+NUMBER_OF_LINKS =(By.CSS_SELECTOR,'#zg_header a')
 
 @when('Click on best sellers')
 def open_best_seller_page(context):

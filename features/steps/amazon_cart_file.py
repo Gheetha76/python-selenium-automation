@@ -9,7 +9,7 @@ from time import sleep
 @when('Click on the cart icon')
 def click_cart_icon(context):
     context.driver.find_element(By.CSS_SELECTOR,"a[href='/gp/cart/view.html?ref_=nav_cart']").click()
-    sleep(4)
+    context.driver.implicitly_wait(4)
 
 
 
