@@ -15,9 +15,11 @@ SUB_TOTAL_ITEM = (By.CSS_SELECTOR,'#sc-subtotal-label-buybox')
 
 @when('Input a product')
 def product_name(context):
-    context.driver.find_element(*SEARCH_NAME).send_keys('Apple Watch')
-    # context.driver.find_element(*SEARCH_BUTTON).click()
-    context.driver.wait.until(EC.element_to_be_clickable(SEARCH_BUTTON)).click()
+    # context.driver.find_element(*SEARCH_NAME).send_keys('Apple Watch')
+    # # # context.driver.find_element(*SEARCH_BUTTON).click()
+    # context.driver.wait.until(EC.element_to_be_clickable(SEARCH_BUTTON)).click()
+    context.app.header.search_product('Apple Watch')
+
 
 
 @then('select a particular product')

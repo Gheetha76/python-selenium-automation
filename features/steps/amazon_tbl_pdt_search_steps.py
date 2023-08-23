@@ -8,9 +8,9 @@ from selenium.webdriver.common.by import By
 
 @when('Search for table')
 def search_table(context):
-    context.driver.find_element(By.ID, 'twotabsearchtextbox').send_keys('table')
-    context.driver.find_element(By.ID, 'nav-search-submit-button').click()
-
+    # context.driver.find_element(By.ID, 'twotabsearchtextbox').send_keys('table')
+    # context.driver.find_element(By.ID, 'nav-search-submit-button').click()
+    context.app.header.search_product('table')
 
 @then('Verify search result is correct')
 def verify_search_result(context):
