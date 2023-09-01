@@ -4,5 +4,5 @@ Feature: Test to see the amazon cart empty
   Scenario: Verify if the Amazon cart is empty when the user clicks on the cart icon
       Given Open Amazon page
       When  Click on the cart icon
-      Then  verify Your Amazon Cart is empty
+      Then  Verify Your Amazon Cart is empty message shows
 

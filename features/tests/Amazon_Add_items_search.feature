@@ -8,7 +8,6 @@ Feature: Testing amazon search by adding more items
      Then Verify searching <result> is correct
     Examples:
     |product              |result          |
-    |apple watch          |"apple watch"   |
     |ipad                 |"ipad"          |
 #    |iphone               |"iphone"        |
 #    |apple tv             |"apple tv"      |

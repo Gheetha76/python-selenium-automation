@@ -29,10 +29,10 @@ print(reverse_integer(123))
 
 
 def is_anagram(s1: str, s2: str):
-    s1 = s1.lower()
+
     if len(s1) != len(s2):
         return False
-    if sorted(s1) == sorted(s2):
+    if sorted(s1.lower()) == sorted(s2.lower()):
         return True
     else:
         return False
