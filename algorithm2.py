@@ -6,10 +6,8 @@
 def reverse_integer(n: int):
 
     s = str(n)
-    if s[0] == '-':
-        return int('-' + s[:0:-1])
-    else:
-        return int(s[::-1])
+    return int('-' + s[:0:-1])
+
 
 print(reverse_integer(-189))
 print(reverse_integer(123))

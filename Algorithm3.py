@@ -92,7 +92,7 @@ def count_larger_neighbors(arr: list):
     count = 0
     for i in range(1, len(arr) - 1):
         if (arr[i]) > (arr[i - 1]) and (arr[i]) > (arr[i + 1]):
-             num = arr[i]
+             num= arr[i]
         elif (arr[i - 1]) > (arr[i]) and (arr[i -1]) >(arr[i + 1]):
              num = arr[i - 1]
         else:

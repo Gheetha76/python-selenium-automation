@@ -19,15 +19,10 @@ class SearchResultPage(Page):
     def verify_cart_is_empty(self,text):
         self.verify_text(text,*self.EMPTY_CART_TEXT)
 
-
     def click_add_to_cart_btn(self):
         self.click(*self.PRODUCT_ADD)
         self.click(*self.THANKS_BUTTON)
         self.click(*self.CART_ADD)
-
-
-
-
 
     def verify_count_of_items_in_cart(self,text):
         self.verify_text(text,*self.SUB_TOTAL_ITEM)

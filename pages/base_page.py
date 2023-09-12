@@ -30,6 +30,27 @@ class Page:
         e = self.driver.find_element(*locator)
         e.send_keys(text)
 
+    def get_current_window(self):
+        return self.driver.current_window_handle
+
+    def get_windows(self):
+        windows = self.driver.window_handles
+        print(windows)
+        return windows
+
+    def switch_to_new_window(self):
+        self.wait.until(EC.new_window_is_opened)
+        all_windows = self.driver.window_handles
+        print(all_windows)
+        print(f'Switching to {all_windows[1]}')
+        self.driver.switch_to.window(all_windows[1])
+
+    def switch_to_window(self, window_id):
+        print(f'Switching to {window_id}')
+        self.driver.switch_to.window(window_id)
+
+    def close_page(self):
+        self.driver.close()
 
     def wait_for_element_clickable(self, *locator):
         self.wait.until(
@@ -69,3 +90,7 @@ class Page:
         elements_count = self.find_elements(*locator)
         assert len(elements_count) == number, \
             f'Expected {number} links but got {len(elements_count)}'
+
+
+
+
