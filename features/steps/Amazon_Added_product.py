@@ -21,11 +21,16 @@ def input_item_name(context,item):
     context.app.header.search_product(item)
 
 
+@then('select a particular product')
+def click_product(context):
+    context.app.header.click_product()
+
+
 @then('Add product to the cart')
 def add_product_cart(context):
     # context.driver.wait.until(EC.element_to_be_clickable(PRODUCT_ADD)).click()
     #
-    # # context.driver.find_element(*PRODUCT_ADD).click()
+    # context.driver.find_element(*PRODUCT_ADD).click()
     #
     # context.driver.find_element(*THANKS_BUTTON).click()
     #
