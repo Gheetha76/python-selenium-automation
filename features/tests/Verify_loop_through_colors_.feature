@@ -8,7 +8,7 @@ Feature: Test for selecting colors of a product using loop
 #    Given  Open Amazon product B07BJKRR25 page
 #    Then   Verify that the user can click on each color and select it
 
-
+  @smoke
   Scenario Outline: Select a product from Closing category and hover over New Arrivals
     Given Open Amazon page
     When Inputting a <item>

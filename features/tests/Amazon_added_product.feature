@@ -1,7 +1,7 @@
 # Created by Gheethvijay at 8/1/23
 Feature:  Check if the cart has the added items
 
-
+   @smoke
    Scenario Outline: Verify if the added product is in the cart
       Given Open Amazon page
       When Inputting a <product>

@@ -18,6 +18,7 @@ class Header(Page):
     NEW_ARRIVALS = (By.CSS_SELECTOR, 'a[href="/New-Arrivals/b/?_encoding=UTF8&node=17020138011&ref_=sv_sl_6"]')
     WOMENS_NEW_ARRIVALS = (By.CSS_SELECTOR, '.mm-merch-panel img[src*="https://m.media-amazon.com/images/G/01//AMAZON_FASHION/2022/"]')
     ALL_DROPDOWN = (By.ID, 'searchDropdownBox')
+    SELECT_PRODUCT_HOODIE = (By.CSS_SELECTOR,'.s-image-padding')
     GOTO_CART_ICON = (By.CSS_SELECTOR, 'a[href="/gp/cart/view.html?ref_=nav_cart"]')
     BEST_SELLER_BTN = (By.CSS_SELECTOR, 'a[href="/gp/bestsellers/?ref_=nav_cs_bestsellers"]')
 
@@ -82,6 +83,11 @@ class Header(Page):
 
     def verify_user_see_deals(self):
         self.wait_for_element_appear(*self.WOMENS_NEW_ARRIVALS)
+
+    def select_hoodie_product(self):
+        self.click(*self.SELECT_PRODUCT_HOODIE)
+
+
 
 
 
